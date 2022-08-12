@@ -1,0 +1,29 @@
+ALGORITHM Sorting
+VAR
+/*declaration des varibles*/
+    i: entier
+    t: tab de n entier
+    n: entier
+    keys: entier
+    j:entier
+BEGIN
+/*insertion du taille du tableau*/
+    Ecrire("donner la taille du tableau")
+    lire(n)
+
+    pour i de 0 à n faire 
+        keys=tab[i]
+        j=i-1
+        tant que (j>=0) &(keys<tab[j]) faire
+            tab[j+1]=tab[j]
+            j=j-1
+            tab[j+1]=keys
+        fin 
+    fin pour 
+
+    /*affichage*/
+    pour i de  à n faire 
+        ecrire(tab[i])
+    fin pour 
+
+END
